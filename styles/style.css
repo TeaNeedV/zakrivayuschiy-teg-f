@@ -11,29 +11,28 @@
 */
 
 .page {
-    min-inline-size: 375px;
-    max-inline-size: 1440px;
+    min-inline-size: 320px;
     min-block-size: 100vh;
     background-image: var(--background-gradient);
     background-size: cover;
-    font-family: var(--main-font, sans-serif);
+    font-family: var(--main-font, sans-serif), sans-serif;
     font-variation-settings: 'wght' var(--main-font-weight);
     display: grid;
+    place-items: center;
     background-attachment: fixed;
 }
 
 .header {
-    width: 1440px;
     margin: 0 auto;
     flex-direction: column;
 }
 
 .logotip {
-    height: 133px;
-    font-family: var(--accent-font, sans-serif);
+    height: auto;
+    font-family: var(--accent-font, sans-serif), sans-serif;
     font-weight: var(--main-font-weight);
     font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-    padding-top: 129px;
+    padding-top: 128px;
 }
 
 .header-card {
@@ -42,34 +41,35 @@
     align-items: center;
     margin: auto;
     position: relative;
-    width: 700px;
     background-color: var(--bg-color);
     border: 2px solid #000000;
-    font-family: var(--accent-font, sans-serif);
+    font-family: var(--accent-font, sans-serif), sans-serif;
     font-weight: 400;
-    inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+    width: clamp(375px, 50%, 700px);
     margin-bottom: 100px;
-    margin-top: 100px;
+    margin-top: 51px;
     padding-bottom: 128px;
 }
 
-
 .header-title {
-    padding-top: 80px;
+    padding-top: 20px;
     font-size: 23px;
     text-transform: uppercase;
 }
 
 .card {
-    width: 696px;
+    width: clamp(375px, 50%, 700px);
     height: auto;
     background-color: var(--bg-color);
     border: 2px solid #000000;
     font-size: var(--main-font);
     font-weight: var(--main-font-weight);
-    line-height: 21px;
+    line-height: 22px;
     align-items: center;
     display: grid;
+    position: relative;
+    margin: auto;
+    padding-bottom: 2px;
 }
 
 .card-img {
@@ -80,12 +80,12 @@
 }
 
 .card-content {
-    padding-top: 6px;
-    padding-left: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
     font-variation-settings: "wght" 700;
     font-size: 18px;
-    font-family: var(--main-font, sans-serif);
-    padding-bottom: 2px;
+    font-family: var(--main-font, sans-serif), sans-serif;
+    padding-bottom: 4px;
 }
 
 .card__icon-button {
@@ -96,6 +96,7 @@
     margin-bottom: 23px;
     background-color: transparent;
     height: 38px;
+    left: 2px;
 }
 
 .card__icon-button:focus-visible {
@@ -110,10 +111,10 @@
 .text {
     padding-left: 25px;
     padding-right: 25px;
-    font-family: var(--main-font, sans-serif);
+    font-family: var(--main-font, sans-serif), sans-serif;
     font-weight: var(--main-font-weight);
     font-size: 18px;
-    padding-top: 29px;
+    padding-top: 25px;
     line-height: 21px;
 }
 
@@ -123,35 +124,35 @@
     gap: 49px;
 }
 
-.filter-1-card {
+.filter-sepia {
     filter: sepia();
 }
 
-.filter-2-card {
+.filter-grayscale {
     filter: grayscale();
 }
 
-.filter-3-card {
+.filter-blur {
     filter: blur(0.09rem);
 }
 
-.filter-4-card {
+.filter-invert {
     filter: invert();
 }
 
-.filter-5-card {
+.filter-saturate {
     filter: saturate(75%);
 }
 
-.filter-6-card {
+.filter-hue-rotate {
     filter: hue-rotate(50deg);
 }
 
-.filter-7-card {
+.filter-brightness {
     filter: brightness(140%);
 }
 
-.filter-8-card {
+.filter {
     filter: brightness(120%) saturate(200%);
     box-shadow: 0px 4px #8bfafa;
 }
@@ -195,10 +196,10 @@ dialog::backdrop {
 
 
 .button__text {
-    font-family: var(--accent-font, sans-serif);
+    font-family: var(--accent-font, sans-serif), sans-serif;
     font-weight: var(--main-font-weight);
     font-size: 14px;
-    
+    padding-top: 2px;
     line-height: 90%;
 }
 .floppy-button-safe {
@@ -214,9 +215,10 @@ dialog::backdrop {
     height: 39px;
     margin-right: 10px;
 }
+
 .dialog {
     margin-bottom: 393px;
-    font-family: var(--accent-font, sans-serif);
+    font-family: var(--accent-font, sans-serif), sans-serif;
 }
 
 .dialog[open] {
@@ -226,7 +228,7 @@ dialog::backdrop {
     grid-template-rows: repeat(2, min-content);
     gap: 24px;
     padding-left: 28px;
-}   
+}
 
 .dialog-window {
     display: grid;
@@ -292,19 +294,22 @@ dialog::backdrop {
 
 .button-like {
     display: flex;
-    padding-top: 1px;
-    padding-right: 22px;
+    padding-top: 6px;
+    padding-right: 25px;
     justify-content: flex-end;
 }
 
 .button-safe {
-    gap: 8px;
+    gap: 9px;
     width: 339px;
     height: 55px;
-    margin-left: 178px;
-    margin-bottom: 105px;
+    margin-bottom: 63px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1px;
     background-color: var(--bg-color);
 }
+
 @media (width <=375px) {
     .page {
          min-inline-size: 100%;
@@ -312,6 +317,7 @@ dialog::backdrop {
 
     .card {
         width: 375px;
+        margin-top: 0px;
     }
 
     .floppy-button-safe {
@@ -321,56 +327,61 @@ dialog::backdrop {
     }
 
     .button-safe {
-        
+
         height: 84px;
-        width: 311px;
+        width: 310px;
         display: flex;
         flex-direction: column;
-        padding-top: 6px;
         margin-left: auto;
-        margin-right: 28px;
-        margin-bottom: 100px;
+        margin-right: 32px;
+        margin-bottom: 99px;
     }
 
     .header-card {
-        height: 325px;
+        height: 327px;
+        width: 375px;
         margin-left: 0;
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
 
     .logotip {
         font-size: 49px;
-        padding-top: 131px;
+        padding-top: 127px;
     }
 
     .header-title {
         font-size: 14px;
-        padding-top: 68px;
     }
 
     .card-content {
-        padding-left: 8px;
+        padding-left: 10px;
         padding-right: 8px;
-        padding-bottom: 6px;
+        padding-bottom: 3px;
+        padding-top: 5px;
     }
 
     .card-img {
         height: 371px;
     }
 
+    .label {
+        top: 17px;
+        right: 0px;
+    }
+
     .button-like {
-        
-        padding-top: 5px;
-        padding-right: 25px;
+        padding-top: 1px;
+        padding-right: 20px;
     }
+
     .card__icon-button {
-        padding-right: 4px;
+        padding-right: 6px;
+        padding-top: 0px;
     }
-    .content {
-        gap: 50px;
-    }
-    
+
     .text {
-        padding-top: 28px;
+        padding-top: 25px;
     }
 
     .button__text {
@@ -378,24 +389,28 @@ dialog::backdrop {
     }
 
     .card__like-button {
-        padding-right: 17px;
+        padding-right: 6px;
         margin-right: 5px;
     }
+
     .dialog[open] {
         padding-left: 36px;
         gap: 26px;
         padding-top: 13px;
     }
+
     .dialog {
-        
         margin-left: 14px;
     }
+
     .dialog-window {
         gap: 3px;
     }
+
     .button-ok {
         width: 263px;
     }
+
     .button__text-dialog {
         padding-top: 2px;
         padding-left: 8px;

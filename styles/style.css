@@ -227,7 +227,6 @@ dialog::backdrop {
     grid-template-rows: repeat(2, min-content);
     gap: 24px;
     padding-left: 28px;
-    background-color: transparent;
 }
 
 .dialog-window {

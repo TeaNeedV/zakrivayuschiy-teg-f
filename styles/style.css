@@ -245,13 +245,6 @@ dialog::backdrop {
     font-size: 14px;
 }
 
-.button-ok {
-    width: 293px;
-    height: 38px;
-    text-transform: uppercase;
-    background-color: var(--bg-color);
-}
-
 .button {
     display: flex;
     align-items: center;
@@ -262,6 +255,13 @@ dialog::backdrop {
     justify-content: center;
     background-color: var(--bg-color);
     border: 2px solid var(--accent-color);
+}
+
+.button-ok {
+    width: 293px;
+    height: 38px;
+    text-transform: uppercase;
+    background-color: var(--bg-color);
 }
 
 .button:focus {

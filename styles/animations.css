@@ -26,7 +26,7 @@
 }
 
 .like-icon:active .main-body {
-	fill: var (--animation-fill-color);
+	fill: var(--animation-fill-color);
 }
 
 .like-icon.is-liked .core {
@@ -82,13 +82,13 @@
 }
 
 @keyframes scaleHeart {
-	0 % {
+	0% {
 		transform: scale(1);
 	}
-	50 % {
+	50% {
 		transform: scale(1.25);
 	}
-	100 % {
+	100% {
 		transform: scale(1);
 	}
 }

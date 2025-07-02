@@ -225,24 +225,25 @@ dialog::backdrop {
     width: 354px;
     height: 191px;
     grid-template-rows: repeat(2, min-content);
-    gap: 24px;
+    gap: 28px;
     padding-left: 28px;
 }
 
 .dialog-window {
     display: grid;
     grid-template-columns: min-content 1fr;
-    gap: 7px;
+    gap: 10px;
     text-transform: uppercase;
     line-height: 150%;
     align-items: center;
     background-color: transparent;
     padding-right: 11px;
-    padding-top: 7px;
+    padding-top: 12px;
 }
 
 .button__text-dialog {
     font-size: 14px;
+    line-height: 150%;
 }
 
 .button {
